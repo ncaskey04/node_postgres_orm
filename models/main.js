@@ -10,23 +10,24 @@ var host = {firstname: 'Bob', lastname: 'Barker'};
 //	console.log('Come on Down!');
 //});
 
-//Models.Person.destroy(function(){
-//  console.log('person deleted!');
-//});
+
 
 //Models.Person.all(function(err, people){
 //  console.log(people);
 //});
 
-//Models.Person.findBy("id", 1, function(err, person){
-//  console.log("found", person);
-//  person.update({firstname: "sam", lastname: "creek"}, function(err, person){
-//   console.log("UPDATED:", person)
-// });
-//})
+Models.Person.findBy("id", 2, function(err, person){
+ 	  console.log("found", person);
 
-Models.Person.findBy('lastname','Barker', function(err,foundPerson){
-	console.log('Found: ', foundPerson);
+ 	  person.destroy(function(err,res){
+ 		console.log('EXTERMINATE!', person);
+	 });
+ // person.update({firstname: "sam", lastname: "creek"}, function(err, person){
+ // console.log("UPDATED:", person)
 });
+
+// Models.Person.findBy('lastname','Barker', function(err,foundPerson){
+// 	console.log('Found: ', foundPerson);
+// });
 
 module.exports = Models;

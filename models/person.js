@@ -70,8 +70,8 @@ Person.prototype.update = function(params, callback) {
   });
 }
 
-Person.prototype.destroy = function(){
-  db.query("DELETE FROM people WHERE id = $",
+Person.prototype.destroy = function(callback){
+  db.query("DELETE FROM people WHERE id = $1",
     [this.id], function(err, res) {
       callback(err);
   });
