@@ -24,13 +24,13 @@ var host = {firstname: 'Bob', lastname: 'Barker'};
 // });
 
 
-Models.Person.findBy("id", 9, function(err, person){
-   console.log("found", person);
-    person.update({firstname: "sam", lastname: "creek"},
-    function(err, person){
-      console.log("UPDATED:", person);
-  });
-});
+// Models.Person.findBy("id", 9, function(err, person){
+//    console.log("found", person);
+//     person.update({firstname: "sam", lastname: "creek"},
+//     function(err, person){
+//       console.log("UPDATED:", person);
+//   });
+// });
 
 
 module.exports = Models;

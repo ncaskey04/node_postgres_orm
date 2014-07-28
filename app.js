@@ -1,17 +1,16 @@
 var express = require('express'),
   bodyParser = require('body-parser'),
   methodOverride = require('method-override'),
+  ejs = require('ejs'),
+  pg = require('pg'),
   Person = require('./models/main.js').Person,
   app = express();
 
 
-
 app.set("view engine", "ejs");
 // Middleware
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride("_method"));
-
-
 
 
 app.get("/people", function(req, res){
